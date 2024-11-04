@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <title>АДМИНИСТРАТОР</title>
+</head>
+
+<body>
+    <h2>Для Администратора</h2>
+
+    <!-- Секция для отображения списка врачей -->
+
+    <h3>Список врачей</h3>
+    <table border="1" id="docktorTable">
+        <thead>
+            <tr>
+                <th>№</th>
+                <TH>ВРАЧ</TH>
+                <th>СПЕЦИАЛИЗАЦИЯ</th>
+                <th>КАБИНЕТ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Маргонец А.С.</td>
+                <td>ЛОР</td>
+                <td>108</td>
+            </tr>
+            <tr>
+                <td>2<td>
+                <td>Кравченко П.Н.</td>
+                <td>ЛОР</td>
+                <td>205</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Попов Ф.Н.</td>
+                <td>ПЕДИАТР</td>
+                <td>103</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Юрьев Г.Н.</td>
+                <td>КАРДИОЛОГ</td>
+                <td>140</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Семенов П.Н.</td>
+                <td>КАРДИОЛОГ</td>
+                <td>855</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Величко И.Г.</td>
+                <td>СТОМАТОЛОГ</td>
+                <td>850</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Романова С.Н.</td>
+                <td>ТЕРАПЕВТ</td>
+                <td>255</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Жуковин И.И.</td>
+                <td>ХИРУРГ</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Дениско П.Н.</td>
+                <td>ПСИХОЛОГ</td>
+                <td>220</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Брелков Ф.И.</td>
+                <td>НЕВРОЛОГ</td>
+                <td>185</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Oтображение палат-->
+
+    <ul>
+        <li>Палата 1</li>
+        <li>Палата 2</li>
+        <li>Палата 3</li>
+        <li>Палата 4</li>
+        <li>Палата 5</li>
+        <li>Палата 6</li>
+        <li>Палата 7</li>
+        <li>Палата 8</li>
+        <li>Палата 9</li>
+        <li>Палата 10</li>
+    </ul>
+
+    <!--Секция для добавления нового пациента-->
+
+    <h3>Добвыить нового пациента</h3>
+    <form id="addPatientForm">
+        <label>Имя пациента: <input type="text" id="patientName" required></label><br>
+        <label> Диагноз: <input type="text" id="patientDiagnosis" required></label><br>
+        <label>Врач:
+            <select name="patientDocktor" required="required">
+                <option value="">Выберите доктора</option>
+                <optgroup label="ЛОР">
+                    <option value="1">Маргонец А.С.</option>
+                    <option value="2">Кравченко П.Н.</option>
+                </optgroup>
+                <optgroup label="ПЕДИАТР">
+                    <option value="3">Попов Ф.Н.</option>
+                </optgroup>
+                <optgroup label="КАРДИОЛОГ">
+                    <option value="4">Юрьев Г.Н.</option>
+                    <option value="5">Семенов П.Н.</option>
+                </optgroup>
+                <optgroup label="СТОМАТОЛОГ"></optgroup>
+                <option value="6">Величко И.Г.</option>
+                <optgroup label="ТЕРАПЕВТ"></optgroup>
+                <option value="7">Романова С.Н</option>
+                <optgroup label="ХИРУРГ"></optgroup>
+                <option value="8">Жуковин И.И.</option>
+                <optgroup label="ПСИХОЛОГ"></optgroup>
+                <option value="9">Дениско П.Н.</option>
+                <optgroup label="НЕВРОЛОГ"></optgroup>
+                <option value="10">Брелков Ф.И.</option>
+
+            </select></label><br>
+        <button type="submit">Добавить</button>
+
+
+    </form>
+</body>
+
+</html>
