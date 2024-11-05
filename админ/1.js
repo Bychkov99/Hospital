@@ -1,3 +1,6 @@
+window.onload = function () {
+    console.log(document.getElementById("docktorTable"))
+    }
 
 function addWard(wardNumber) {
     const wardList = document.getElementById("wardList");
