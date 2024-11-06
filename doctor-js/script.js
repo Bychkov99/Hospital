@@ -1,5 +1,7 @@
 window.onload = function () {
-    document.getElementById("table-container")
+    document.getElementById("table-container");
+    createDiagnosisList();
+    createDiagnosisTable();
 
 const container = document.getElementById("table-container");
 const table = document.createElement("table");
@@ -42,4 +44,68 @@ const data = [
     table.appendChild(row);
 });
  container.appendChild(table);
-}
+
+
+
+
+
+
+
+
+
+
+
+ function createDiagnosisList() {
+     const diagnosisSelect = document.getElementById("diagnosisContainer");
+     const select = document.createElement("select");
+     select.id = "diagnosisSelect";
+
+//  массив с названия диагнозов
+const diagnoses = [
+    ["Анемия", "Мигрень", "Острого аппендицита", "Инфаркт миокарда", "Артериальная гипертензия", "Бронхит", "Грипп", "Пневмония", "Стенокардия", "Острый бронхит", "Отравление", "Артрит", "Депрессия", "Сколиоз", "Цирроз печени", "Простатит", "Гастрит", "Ревматоидный артрит", "Хроническая почечная недостаточность", "Эпилепсия", "Тонзилит"]
+            ];
+
+//  выпадающий список
+    diagnoses.forEach((diagnosis, index) => { 
+        const option = document.createElement("option");
+         option.value =`Диагноз ${index + 1}`;
+         option.textContent = diagnosis;
+         select.appendChild(option);
+     });
+     diagnosisContainer.appendChild(select);
+    }
+    function createDiagnosisTable(){
+        const tableContainer = document.getElementById("tableContainer");
+        const table = document.createElement("table");
+        table.border = "1";
+        table.style.borderCollapse = "collapse";
+
+    // заголовки таблицы
+    const header = ["Диагноз"];
+    const headerRow = document.createElement("tr");
+
+    headers.forEach(headerText => {
+        const headerCell = document.createElement("tr");
+        headerCell.textContent = headerText;
+        headerCell.style.padding = "8px";
+        headerRow.appendChild(headerCell);
+    });
+    table.appendChild(headerRow);
+
+    const data = ["Анемия", "Мигрень", "Острого аппендицита", "Инфаркт миокарда", "Артериальная гипертензия", "Бронхит", "Грипп", "Пневмония", "Стенокардия", "Острый бронхит", "Отравление", "Артрит", "Депрессия", "Сколиоз", "Цирроз печени", "Простатит", "Гастрит", "Ревматоидный артрит", "Хроническая почечная недостаточность", "Эпилепсия", "Тонзилит"];
+
+
+//  заполняем таблицу данными
+        data.forEach(diagnosis => {
+            const row = document.createElement("tr");
+            const sell = document.createElement("td");
+            cell.textContent = diagnosis;
+            cell.style.padding = "8px";
+            cell.style.border = "1px solid #000";
+            row.appendChild(cell);
+            table.appendChild(row);
+    });
+
+    tableContainer.appendChild(table);
+}}
+

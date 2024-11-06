@@ -2,7 +2,7 @@
     <head>
         <title>АДМИНИСТРАТОР</title>
       <script src="1.js">
-      </script>
+      </script> 
     </head>
     <body>
         <h2>Для Администратора</h2>
@@ -26,7 +26,7 @@
                 <tr>
                     <td>1</td>
                     <td>Маргонец А.С.</td>
-                    <td>ЛОР</td>
+                    <td>ГЕМАТОЛОГ</td>
                     <td>108</td>
                 </tr>
                 <tr>
@@ -38,7 +38,7 @@
                 <tr>
                     <td>3</td>
                     <td>Попов Ф.Н.</td>
-                    <td>ПЕДИАТР</td>
+                    <td>ТЕРАПЕВТ</td>
                     <td>103</td>
                 </tr>
 
@@ -51,7 +51,7 @@
                 <tr>
                     <td>5</td>
                     <td>Семенов П.Н.</td>
-                    <td>КАРДИОЛОГ</td>
+                    <td>ПУЛЬМОНОЛОГ</td>
                     <td>855</td>
                 </tr>
                 <tr>
@@ -63,19 +63,19 @@
                 <tr>
                     <td>7</td>
                     <td>Романова С.Н.</td>
-                    <td>ТЕРАПЕВТ</td>
+                    <td>ДЕРМАТОЛОГ</td>
                     <td>255</td>
                 </tr>
                 <tr>
                     <td>8</td>
                     <td>Жуковин И.И.</td>
-                    <td>ХИРУРГ</td>
+                    <td>РЕВМАТОЛОГ</td>
                     <td>100</td>
                 </tr>
                 <tr>
                     <td>9</td>
                     <td>Дениско П.Н.</td>
-                    <td>ПСИХОЛОГ</td>
+                    <td>ГАСТРОЭНТЕРОЛОГ</td>
                     <td>220</td>
                 </tr>
                 <tr>
@@ -89,8 +89,13 @@
 
         <!--Oтображение палат-->
 
-        <h3>Список Палат</h3>
+        <h3>Выберите палату:</h3>
+
+        <div id = "roomContainer"> </div>
+        <button type="submit">Подтвердить выбор</button>
+        <p id = "selectedRoom"Выбранная палата: не выбранно></p>
         <ul id="wardList">
+
             <li>Палата 1</li>
             <li>Палата 2</li>
             <li>Палата 3</li>
@@ -109,30 +114,41 @@
         <form id="addPatientForm">
             <label>Имя пациента: <input type="text" id="patientName"
                     required></label><br>
-            <label> Диагноз: <input type="text" id="patientDiagnosis"
+            <label>Дата рождения: <input type="text" id="patientDate"
+                        required></label><br> 
+            <label>Симптомы: <input type="text" id="patientDiagnosis"
                     required></label><br>
             <label>Врач:
                 <select name="patientDocktor" required="required">
                     <option value>Выберите доктора</option>
-                    <optgroup label="ЛОР">
+
+                    <optgroup label="ГЕМАТОЛОГ"></optgroup>
                         <option value="1">Маргонец А.С.</option>
+
+                        <optgroup label="ЛОР"></optgroup>
                         <option value="2">Кравченко П.Н.</option>
-                    </optgroup>
-                    <optgroup label="ПЕДИАТР">
+                
+                    <optgroup label="ТЕРАПЕВТ"></optgroup>
                         <option value="3">Попов Ф.Н.</option>
-                    </optgroup>
+                
                     <optgroup label="КАРДИОЛОГ">
                         <option value="4">Юрьев Г.Н.</option>
+
+                        <optgroup label="ПУЛЬМОНОЛОГ"></optgroup>
                         <option value="5">Семенов П.Н.</option>
-                    </optgroup>
+                
                     <optgroup label="СТОМАТОЛОГ"></optgroup>
                     <option value="6">Величко И.Г.</option>
-                    <optgroup label="ТЕРАПЕВТ"></optgroup>
+
+                    <optgroup label="ДЕРМАТОЛОГ"></optgroup>
                     <option value="7">Романова С.Н</option>
-                    <optgroup label="ХИРУРГ"></optgroup>
+
+                    <optgroup label="РЕВМАТОЛОГ"></optgroup>
                     <option value="8">Жуковин И.И.</option>
-                    <optgroup label="ПСИХОЛОГ"></optgroup>
+
+                    <optgroup label="ГАСТРОЭНТЕРОЛОГ"></optgroup>
                     <option value="9">Дениско П.Н.</option>
+
                     <optgroup label="НЕВРОЛОГ"></optgroup>
                     <option value="10">Брелков Ф.И.</option>
 
@@ -141,5 +157,4 @@
 
         </form>
     </body>
-
 </html>
